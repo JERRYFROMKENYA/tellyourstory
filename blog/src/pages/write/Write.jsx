@@ -1,12 +1,13 @@
 import "./write.css";
 import {FcAddImage} from "react-icons/fc";
 import {useState} from "react";
-import {SearchComponent} from "../../components/index.jsx";
+import {SearchComponent, Texteditor} from "../../components/index.jsx";
 import {Avatar, Chip} from "@mui/material";
 
 
 export default function Write() {
   const [musicAdded,setMusicAdded]=useState([])
+  const [mainContent, setMainContent]=useState()
   const removeMusic = (xid) => {
     setMusicAdded(current=> current.filter((music) => music.name !== xid));
     console.log(musicAdded, xid)
@@ -59,13 +60,7 @@ export default function Write() {
           })}
         </div>
         <div className="writeFormGroup">
-          <textarea
-            className="writeInput writeText"
-            placeholder="Tell your story..."
-            type="text"
-            autoFocus={true}
-          />
-
+          <Texteditor MainContent={mainContent} setMC={setMainContent}></Texteditor>
         </div>
 
 

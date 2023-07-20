@@ -1,11 +1,11 @@
-.navbar {
+ .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 8rem;
-  background: var(--cop-pink);
+  background: var(--cop-pink) ;
 
-  z-index: 2;
+  z-index: 1;
   position: sticky;
   top: 0;
   max-width: none;
@@ -106,7 +106,7 @@ a.btn-light {
     display: block;
     position: absolute;
     list-style: none;
-    background: #0a1930;
+    background: var(--cop-pink);
     left: 0;
     top: 80px;
     width: 100%;

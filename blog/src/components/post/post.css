@@ -38,6 +38,7 @@
   font-weight: bolder;
   margin-top: 15px;
   cursor: pointer;
+
 }
 
 .postDate {
@@ -67,7 +68,7 @@
 @media screen and (max-width: 769px) {
 
   .post{
-
+    width:80vw;
     margin:0;
     margin-bottom: 100px;
   }

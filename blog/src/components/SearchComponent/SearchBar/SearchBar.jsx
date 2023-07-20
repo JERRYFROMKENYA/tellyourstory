@@ -17,7 +17,7 @@ export const SearchBar = ({ setResults,setContent }) => {
         if (value.length<2)
         {
             setContent(undefined)
-            setResults(undefined)
+            setResults("")
         }
     }
 
@@ -70,9 +70,9 @@ export const SearchBar = ({ setResults,setContent }) => {
       <FaMusic id="search-icon" />
       <input
           onKeyPress={event =>{
-                  if(event.key === "backspace") {
-                      setContent(undefined)
-                      setResults(undefined)
+                  if(event.key == "backspace") {
+                      setContent("")
+                      setResults("")
                   }}}
         placeholder="Type to search..."
         value={input}
